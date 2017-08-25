@@ -16,7 +16,7 @@ namespace Portfolio.Models
         public static List<Repository> GetRepositories()
         {
             var client = new RestClient("https://api.github.com");
-            var request = new RestRequest("/users/mcarlin27/repos.json", Method.GET);
+            var request = new RestRequest("/users/mcarlin27/repos", Method.GET);
             var response = new RestResponse();
             Task.Run(async () =>
             {
