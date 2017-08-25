@@ -2,21 +2,29 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>@ViewBag.Title</title>
 </head>
     <body>
-        <div class="navbar">
-            <span class="navbar-brand">
-                <p>
-                    @Html.ActionLink("Marilyn Carlin", "Index", "Home")
-                </p>
-            </span>
-            <ul class="navbar-links">
-                <li class="li-nav">
-                    @Html.ActionLink("Projects", "Index", "Repositories") |
-                </li>
-            </ul>
-        </div>
+        <nav class="navbar navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Marilyn Carlin</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            @Html.ActionLink("Projects", "Index", "Repositories")
+                        </li>
+                        <li>
+                            @Html.ActionLink("About", "About", "Home")
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div class="container">
             @RenderBody()
         </div>
