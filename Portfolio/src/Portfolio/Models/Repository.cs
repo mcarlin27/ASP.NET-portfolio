@@ -10,20 +10,23 @@ namespace Portfolio.Models
     {
         public string name { get; set; }
         public string description { get; set; }
-        public string url { get; set; }
+        public string html_url { get; set; }
         public int stargazers_count { get; set; }
 
         public static List<Repository> GetRepositories()
         {
             RestClient client = new RestClient("https://api.github.com");
-            RestRequest request = new RestRequest("/search/repositories?q=user:mcarlin27&sort=stars&per_page=3", Method.GET);
+            RestRequest request = new RestRequest("/search/repositories?q=user:" + EnvironmentVariables.user + "&sort=stars&page=1&per_page=3", Method.GET);
+            request.AddHeader("user-agent", EnvironmentVariables.user);
+
             RestResponse response = new RestResponse();
             Task.Run(async () =>
             {
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
+            
             JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(response.Content);
-            var repositoryList = JsonConvert.DeserializeObject<List<Repository>>(jsonResponse["repos"].ToString());
+            List<Repository> repositoryList = JsonConvert.DeserializeObject<List<Repository>>(jsonResponse["items"].ToString());
             return repositoryList;
         }
 

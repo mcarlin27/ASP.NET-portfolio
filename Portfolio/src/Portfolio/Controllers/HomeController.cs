@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Portfolio.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Portfolio.Controllers
 {
@@ -12,12 +7,6 @@ namespace Portfolio.Controllers
         public IActionResult Index()
         {
             return View();
-        }
-
-        public IActionResult GetRepositories()
-        {
-            var allRepositories = Repository.GetRepositories();
-            return View(allRepositories);
         }
     }
 }

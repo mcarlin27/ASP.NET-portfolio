@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Top Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Portfolio.Models
+@model IEnumerable<Repository>
+
+<ul>
+    @foreach (var repository in Model)
+    {
+        <li>
+            <ul>
+                <li>Name: <a href="@repository.html_url">@repository.name</a></li>
+                <li>Description: @Html.DisplayFor(modelItem => repository.description)</li>
+                <li>Stars: @Html.DisplayFor(modelItem => repository.stargazers_count)</li>
+            </ul>
+        </li>
+    }
+</ul>

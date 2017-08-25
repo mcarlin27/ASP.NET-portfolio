@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+    <body>
+        <div class="navbar">
+            <span class="navbar-brand">
+                <p>
+                    @Html.ActionLink("Marilyn Carlin", "Index", "Home")
+                </p>
+            </span>
+            <ul class="navbar-links">
+                <li class="li-nav">
+                    @Html.ActionLink("Projects", "Index", "Repositories") |
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            @RenderBody()
+        </div>
+    </body>
+</html>
