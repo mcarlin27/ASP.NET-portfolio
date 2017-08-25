@@ -15,7 +15,73 @@
 }
 .navbar-brand {
     margin-top: 20px;
+    margin-left: -40px;
     text-decoration: none;
     font-size: 50px;
     color: #FFF;
+}
+
+.navbar-header {
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.navbar {
+  background-color: #29A036;
+  width: 100vw;
+  margin-top: -8px;
+  margin-left: -8px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  height: 85px;
+}
+.navbar-brand {
+    margin-top: 23px;
+    text-decoration: none;
+    font-size: 50px;
+    color: #FFF;
+}
+.navbar-description {
+    padding-top: 38px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFF;
+    display: inline-block;
+}
+
+.navbar-nav li a {
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFF;
+}
+.navbar-nav li a:hover {
+    text-underline-position: below;
+    text-decoration: underline;
+}
+
+.parallax {
+    background-image: url("../img/snowflake.jpg");
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+body .homepage-content {
+    background-color: #FFF;
 }
