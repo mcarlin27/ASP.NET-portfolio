@@ -8,16 +8,16 @@ namespace Portfolio.Models
 {
     public class Repository
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string URL { get; set; }
-        public int StargazersCount { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public string url { get; set; }
+        public int stargazers_count { get; set; }
 
         public static List<Repository> GetRepositories()
         {
-            var client = new RestClient("https://api.github.com");
-            var request = new RestRequest("/users/mcarlin27/repos", Method.GET);
-            var response = new RestResponse();
+            RestClient client = new RestClient("https://api.github.com");
+            RestRequest request = new RestRequest("/search/repositories?q=user:mcarlin27&sort=stars&per_page=3", Method.GET);
+            RestResponse response = new RestResponse();
             Task.Run(async () =>
             {
                 response = await GetResponseContentAsync(client, request) as RestResponse;
