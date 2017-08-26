@@ -1,5 +1,5 @@
 # Portfolio
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=plastic)]
+[Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=plastic)
 
 #### _App created for Epicodus .NET Week 4 Independent project, using ASP.NET, with a focus on making an API call with RestSharp. 8/25/2017_
 
