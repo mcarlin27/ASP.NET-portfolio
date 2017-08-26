@@ -28,8 +28,8 @@ If you do not have SSMS, please download it [HERE](https://docs.microsoft.com/en
 **Cloning From GitHub:** Download or clone project repository onto desktop from GitHub.
 
 **Set up and Installation**
-1. pen the project in Visual Studio.
-2. Back in VS, click IIS Express at the top of the window. Project should open in a new window in your default browser.
+1. Open the project in Visual Studio.
+2. Click IIS Express at the top of the window. Project should open in a new window in your default browser.
 
 ## Known Bugs
 
