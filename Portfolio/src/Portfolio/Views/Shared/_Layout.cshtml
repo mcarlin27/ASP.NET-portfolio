@@ -5,10 +5,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/styles.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Slabo+27px|Source+Sans+Pro" rel="stylesheet">
     <title>@ViewBag.Title</title>
 </head>
     <body>
-        <div class="container @ViewBag.BodyClass">
+        <div>
             @RenderBody()
         </div>
         <nav class="navbar navbar-fixed-bottom" role="navigation">
@@ -20,10 +21,10 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li>
-                                @Html.ActionLink("Projects", "Index", "Repositories")
+                                <a href="#about">About</a>
                             </li>
                             <li>
-                                @Html.ActionLink("About", "About", "Home")
+                                <a href="#portfolio">Portfolio</a>
                             </li>
                         </ul>
                     </div>

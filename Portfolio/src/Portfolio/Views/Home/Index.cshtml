@@ -1,10 +1,45 @@
 ﻿@{
     ViewBag.Title = "Marilyn Carlin";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.BodyClass = "homepage-parallax";
 }
 
-    <div class="homepage-content">
-        <h3>Hello this is my site</h3>
-        <p>I am currently a student at Epicodus in Portland, Oregon, in the C#/.NET track. I have a strong focus on back-end languages, particularly C# and ASP.NET, with experience in Javascript, HTML, and CSS. I'm passionate about language, and love the puzzle and challenge, from an ASP.NET To-Do List to Herodotus' <em>HIstories</em>.</p>
-    </div>
+@using Portfolio.Models
+@model IEnumerable<Repository>
+
+<div class="img1">
+    <span class="content">
+        Marilyn Carlin
+    </span>
+</div>
+
+<div class="about" id="about">
+    <h3>About Me</h3>
+    <p>I am currently a student at Epicodus in Portland, Oregon, in the C#/.NET track. I have a strong focus on back-end languages, particularly C# and ASP.NET, with experience in Javascript, HTML, and CSS. I'm passionate about language, and love the puzzle and challenge, from an ASP.NET To-Do List to Herodotus' <em>HIstories</em>.</p>
+    <p>My path to programming was not straightforward. As an undergraduate I studied Classics, with a focus on Latin and Ancient Greek. Before returning to school at Epicodus, I worked as an SAT/ACT tutor. I loved working one-on-one with clients, creating personalized lesson plans for each student. Though I loved working independently with clients, I wanted more creativity in my daily workflow, and to build a tangible product. It’s clear, even in the world of test-prep tutoring, that industry is moving towards technology, and I wanted to pursue a career in a dynamic field. Programming appealed to me because of its similarity to languages like Latin. I love the puzzle: piecing together the right pieces of information and focusing on the syntax and grammar of a language. In an effort to combine my love of complex language syntax and my desire for more workplace creativity, I joined the C# track at Epicodus.</p>
+</div>
+
+<div class="img2">
+</div>
+
+<div class="portfolio" id="portfolio">
+    @foreach (var repository in Model)
+    {
+        <div class="portfolio-content">
+        <div class="img4"></div>
+            <div class="box">
+                <div class="card-front">
+                    <img src="~/img/github.png" />
+                </div>
+                <div class="card-back">
+                    <h4>Name: <a href="@repository.html_url">@repository.name</a></h4>
+                    <p>Description: @Html.DisplayFor(modelItem => repository.description)</p>
+                    <p>Stars: @Html.DisplayFor(modelItem => repository.stargazers_count)</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="img3">
+</div>
+

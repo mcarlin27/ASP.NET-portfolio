@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Portfolio.Models;
+using System.Collections.Generic;
 
 namespace Portfolio.Controllers
 {
@@ -6,7 +8,8 @@ namespace Portfolio.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            List<Repository> allRepositories = Repository.GetRepositories();
+            return View(allRepositories);
         }
         public IActionResult About()
         {

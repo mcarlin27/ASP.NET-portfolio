@@ -1,10 +1,9 @@
 ﻿.nav-wrapper {
     display: flex;
     justify-content: flex-end;
-    background-color: pink;
 }
 .navbar {
-  background-color: red;
+  background-color: rgba(201, 159, 152, 0.8);
   width: 100vw;
   justify-content: space-between;
   height: 50px;
@@ -12,21 +11,54 @@
 .navbar-brand {
     text-decoration: none;
     font-size: 30px;
-    color: #FFF;
+    color: #FFF8E8;
+    font-family: 'Slabo 27px', serif;
 }
 .navbar-nav li a {
     text-decoration: none;
     font-size: 20px;
-    color: #FFF;
+    color: #FFF8E8;
+    font-family: 'Slabo 27px', serif;
 }
 .navbar-nav li a:hover {
     text-underline-position: below;
     text-decoration: underline;
 }
 
-.homepage-parallax {
+.img1 {
+    background-color: red;
     background-image: url("../img/clouds.JPG");
     height: 1000px;
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    color: #2F3136;
+    font-size: 800%;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-shadow: 3px 3px 6px #000;
+}
+
+.about, .portfolio {
+    color: #000;
+    background-color: #FFF8E8;
+    padding: 50px 80px;
+    text-align: justify;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.img2 {
+    background-image: url("../img/kili.JPG");
+    height: 800px;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -34,9 +66,9 @@
     background-size: cover;
 }
 
-.about-parallax {
+.img3 {
     background-image: url("../img/snowflake.jpg");
-    height: 1000px;
+    height: 800px;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -45,16 +77,34 @@
 }
 
 @media only screen and (max-device-width: 1024px) {
-    .parallax {
+    .img1, .img2, .img3 {
         background-attachment: scroll;
     }
 }
 
-body .homepage-content {
-    background-color: rgba(255, 254, 227, 0.6);
-    width: 40%;
-    height: 25%;
-    margin: 0 auto;
-    margin-top: 15%;
-    box-shadow: 10px 8px 5px black;
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.portfolio-content {
+  background: linear-gradient(to bottom left, #2F3136, #FFF8E8);
+  margin: 20px;
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  border: 3px solid black;
+}
+
+.box {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.box a, p {
+    font-family: 'PT Sans', sans-serif;
+    color: #000;
 }
