@@ -8,7 +8,10 @@
     <title>@ViewBag.Title</title>
 </head>
     <body>
-        <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container @ViewBag.BodyClass">
+            @RenderBody()
+        </div>
+        <nav class="navbar navbar-fixed-bottom" role="navigation">
             <div class="container">
                 <div class="nav-wrapper">
                     <div class="navbar-header">
@@ -27,8 +30,5 @@
                 </div>
             </div>
         </nav>
-        <div class="container parallax">
-            @RenderBody()
-        </div>
     </body>
 </html>
