@@ -14,19 +14,25 @@
     color: #FFF8E8;
     font-family: 'Slabo 27px', serif;
 }
+
+.navbar-brand:hover {
+    text-underline-position: below;
+    text-decoration: underline;
+    color: #FFF8E8;
+}
 .navbar-nav li a {
     text-decoration: none;
     font-size: 20px;
     color: #FFF8E8;
     font-family: 'Slabo 27px', serif;
 }
-.navbar-nav li a:hover {
+.nav li a:hover {
     text-underline-position: below;
     text-decoration: underline;
+    background-color: rgba(201, 159, 152, 0);
 }
 
 .img1 {
-    background-color: red;
     background-image: url("../img/clouds.JPG");
     height: 1000px;
     position: relative;
